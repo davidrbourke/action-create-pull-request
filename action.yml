@@ -1,4 +1,4 @@
-name: 'Create Pull Request'
+name: 'drb-create-pull-request'
 author: 'davidrbourke'
 description: 'Creates a pull request from a source branch into a target branch'
 inputs:
