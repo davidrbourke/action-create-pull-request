@@ -1,0 +1,27 @@
+name: 'Create Pull Request'
+author: 'davidrbourke'
+description: 'Creates a pull request from a source branch into a target branch'
+inputs:
+  source_branch:
+    description: 'the branch to merge from'
+    required: true
+    default: 'master'
+  target_branch:
+    description: 'the branch to merge to'
+    required: true
+    default: 'develop'
+  github_token:
+    description: 'the github token'
+    required: true
+  reviewers:
+    description: 'a comma separateed string of reviewers by their github login id'
+  label:
+    description: 'the label to add to the pr'
+outputs:
+  url:
+    description: 'The html url of the created pull request'
+  title:
+    description: 'The title of the created pull request'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
